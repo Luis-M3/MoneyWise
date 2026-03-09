@@ -1,0 +1,20 @@
+<ion-tabs>
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="dashboard">
+      <ion-icon name="grid-outline"></ion-icon>
+      <ion-label>Dashboard</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="transacciones">
+      <ion-icon name="list-outline"></ion-icon>
+      <ion-label>Transacciones</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button (click)="cerrarSesion()">
+      <ion-icon name="log-out-outline"></ion-icon>
+      <ion-label>Salir</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+
+</ion-tabs>

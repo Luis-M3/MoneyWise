@@ -1,0 +1,25 @@
+.date-wrapper {
+  margin-bottom: 12px;
+}
+
+ion-item {
+  --background: rgba(84, 131, 185, 0.15);
+  --color: #C1E8FF;
+  --border-color: rgba(84, 131, 185, 0.3);
+  border-radius: 8px;
+}
+
+ion-label {
+  --color: #7DA0CA !important;
+}
+
+ion-datetime {
+  --background: transparent;
+  --color: #C1E8FF;
+}
+
+ion-note {
+  color: #FF6B6B !important;
+  font-size: 12px;
+  padding-left: 8px;
+}

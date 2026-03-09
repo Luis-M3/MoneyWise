@@ -1,0 +1,69 @@
+<div class="detail-container" *ngIf="transaccion">
+
+  <div class="detail-header">
+    <app-category-icon
+      [categoria]="transaccion.categoria"
+      tamanio="medium">
+    </app-category-icon>
+    <h2>{{ transaccion.categoria }}</h2>
+    <app-amount-display
+      [monto]="transaccion.monto"
+      [tipo]="transaccion.tipo"
+      tamanio="large">
+    </app-amount-display>
+    <app-category-badge
+      [categoria]="transaccion.categoria"
+      [mostrarIcono]="false">
+    </app-category-badge>
+  </div>
+
+  <ion-card>
+    <ion-list lines="full">
+      <ion-item>
+        <ion-icon name="calendar-outline" slot="start" color="primary"></ion-icon>
+        <ion-label>
+          <p>Fecha</p>
+          <h3>{{ transaccion.fecha | dateFormat }}</h3>
+        </ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="swap-vertical-outline" slot="start" color="primary"></ion-icon>
+        <ion-label>
+          <p>Tipo</p>
+          <h3>{{ transaccion.tipo === 'ingreso' ? 'Ingreso' : 'Gasto' }}</h3>
+        </ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-icon name="document-text-outline" slot="start" color="primary"></ion-icon>
+        <ion-label>
+          <p>Descripción</p>
+          <h3>{{ transaccion.descripcion || 'Sin descripción' }}</h3>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <div class="comprobante-section" *ngIf="transaccion.comprobante">
+    <h3 class="section-title">
+      <ion-icon name="image-outline"></ion-icon>
+      Comprobante
+    </h3>
+    <div class="comprobante-image">
+      <img [src]="transaccion.comprobante" alt="Comprobante"/>
+    </div>
+  </div>
+
+  <div class="action-buttons">
+    <ion-button expand="block" fill="outline" (click)="onEdit.emit()">
+      <ion-icon name="create-outline" slot="start"></ion-icon>
+      Editar
+    </ion-button>
+    <ion-button expand="block" fill="outline" color="danger" (click)="onDelete.emit()">
+      <ion-icon name="trash-outline" slot="start"></ion-icon>
+      Eliminar
+    </ion-button>
+  </div>
+
+</div>

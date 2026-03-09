@@ -1,19 +1,16 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-
-import { IonicModule } from '@ionic/angular';
-
-import { ListaTransaccionesPageRoutingModule } from './lista-transacciones-routing.module';
-
+import { RouterModule, Routes } from '@angular/router';
 import { ListaTransaccionesPage } from './lista-transacciones.page';
+import { SharedModule } from '../../../shared/shared-module';
+import { FormularioTransaccionModule } from '../formulario-transaccion/formulario-transaccion.module';
+
+const routes: Routes = [{ path: '', component: ListaTransaccionesPage }];
 
 @NgModule({
   imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    ListaTransaccionesPageRoutingModule
+    SharedModule,
+    RouterModule.forChild(routes),
+    FormularioTransaccionModule
   ],
   declarations: [ListaTransaccionesPage]
 })

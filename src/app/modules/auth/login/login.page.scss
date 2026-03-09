@@ -1,0 +1,74 @@
+.login-content {
+  --background: linear-gradient(135deg, #021024 0%, #052659 100%);
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 40px;
+
+  .logo-icon {
+    font-size: 64px;
+    color: #C1E8FF;
+  }
+
+  h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    color: #C1E8FF;
+  }
+
+  p {
+    font-size: 14px;
+    color: #7DA0CA;
+  }
+}
+
+ion-item {
+  --background: rgba(84, 131, 185, 0.2);
+  --color: #C1E8FF;
+  --placeholder-color: #7DA0CA;
+  --border-color: #5483B9;
+  border-radius: 8px;
+  margin-bottom: 4px;
+}
+
+ion-label {
+  --color: #7DA0CA !important;
+}
+
+ion-note {
+  color: #ff6b6b !important;
+  padding-left: 16px;
+  font-size: 12px;
+}
+
+ion-button {
+  --background: #5483B9;
+  --background-hover: #7DA0CA;
+  --color: #C1E8FF;
+  --border-radius: 8px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.register-link {
+  text-align: center;
+  margin-top: 20px;
+  color: #7DA0CA;
+
+  span {
+    font-weight: bold;
+    color: #C1E8FF;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}

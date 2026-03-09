@@ -1,0 +1,36 @@
+.filter-bar {
+  background: #052659;
+  padding: 4px 0;
+}
+
+ion-segment {
+  --background: #021024;
+  padding: 4px 8px;
+}
+
+ion-segment-button {
+  --color: #7DA0CA;
+  --color-checked: #C1E8FF;
+  --indicator-color: #5483B9;
+}
+
+ion-searchbar {
+  --background: rgba(84, 131, 185, 0.2);
+  --color: #C1E8FF;
+  --placeholder-color: #7DA0CA;
+  --icon-color: #7DA0CA;
+}
+
+ion-item {
+  --background: transparent;
+  --color: #C1E8FF;
+  --border-color: rgba(84, 131, 185, 0.2);
+}
+
+ion-select {
+  color: #C1E8FF;
+}
+
+.categoria-select {
+  padding: 0 8px;
+}

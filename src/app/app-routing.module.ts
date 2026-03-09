@@ -17,7 +17,7 @@ const routes: Routes = [
     path: 'tabs',
     canActivate: [AuthGuard],
     loadChildren: () =>
-      import('./modules/dashboard/dashboard-module').then(m => m.DashboardModule)
+      import('./modules/tabs/tabs.module').then(m => m.TabsModule)
   }
 ];
 

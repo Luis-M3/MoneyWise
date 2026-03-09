@@ -1,0 +1,4 @@
+<span class="amount"
+  [ngClass]="[tipo, tamanio]">
+  {{ tipo === 'gasto' ? '-' : tipo === 'ingreso' ? '+' : '' }}{{ monto | currencyFormat }}
+</span>

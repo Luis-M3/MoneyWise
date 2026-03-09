@@ -1,19 +1,16 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-
-import { IonicModule } from '@ionic/angular';
-
-import { DetalleTransaccionPageRoutingModule } from './detalle-transaccion-routing.module';
-
+import { RouterModule, Routes } from '@angular/router';
 import { DetalleTransaccionPage } from './detalle-transaccion.page';
+import { SharedModule } from '../../../shared/shared-module';
+import { FormularioTransaccionModule } from '../formulario-transaccion/formulario-transaccion.module';
+
+const routes: Routes = [{ path: '', component: DetalleTransaccionPage }];
 
 @NgModule({
   imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    DetalleTransaccionPageRoutingModule
+    SharedModule,
+    RouterModule.forChild(routes),
+    FormularioTransaccionModule
   ],
   declarations: [DetalleTransaccionPage]
 })

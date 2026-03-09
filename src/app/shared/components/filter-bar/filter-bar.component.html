@@ -1,0 +1,36 @@
+<div class="filter-bar">
+
+  <ion-segment [value]="tipoSeleccionado" (ionChange)="tipoChange($event)">
+    <ion-segment-button value="todos">
+      <ion-label>Todos</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="ingreso">
+      <ion-label>Ingresos</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="gasto">
+      <ion-label>Gastos</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-searchbar
+    placeholder="Buscar por descripción..."
+    (ionInput)="buscarChange($event)"
+    [debounce]="300">
+  </ion-searchbar>
+
+  <ion-item lines="none" class="categoria-select">
+    <ion-label>Categoría</ion-label>
+    <ion-select
+      [value]="categoriaSeleccionada"
+      (ionChange)="categoriaChange($event)"
+      placeholder="Todas">
+      <ion-select-option value="todas">Todas</ion-select-option>
+      <ion-select-option
+        *ngFor="let cat of categorias"
+        [value]="cat.nombre">
+        {{ cat.nombre }}
+      </ion-select-option>
+    </ion-select>
+  </ion-item>
+
+</div>

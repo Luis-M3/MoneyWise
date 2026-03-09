@@ -1,0 +1,45 @@
+ion-toolbar {
+  --background: #052659;
+  --color: #C1E8FF;
+}
+
+ion-content {
+  --background: #021024;
+}
+
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 20px;
+}
+
+.main-photo {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #5483B9;
+
+  img {
+    width: 100%;
+    object-fit: contain;
+    max-height: 70vh;
+  }
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  ion-button {
+    --color: #C1E8FF;
+  }
+
+  .counter {
+    color: #7DA0CA;
+    font-size: 14px;
+  }
+}

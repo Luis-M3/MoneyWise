@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Comprobante</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="cerrar()">
+        <ion-icon name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="gallery-container">
+
+    <div class="main-photo">
+      <img [src]="fotos[fotoActual]" alt="Foto"/>
+    </div>
+
+    <div class="navigation" *ngIf="fotos.length > 1">
+      <ion-button fill="clear" (click)="anterior()" [disabled]="fotoActual === 0">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+      </ion-button>
+      <span class="counter">{{ fotoActual + 1 }} / {{ fotos.length }}</span>
+      <ion-button fill="clear" (click)="siguiente()" [disabled]="fotoActual === fotos.length - 1">
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </ion-button>
+    </div>
+
+  </div>
+</ion-content>

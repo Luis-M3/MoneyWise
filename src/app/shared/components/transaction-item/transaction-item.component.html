@@ -1,0 +1,25 @@
+<ion-item (click)="clicked()" button detail lines="full">
+  <div slot="start" class="category-icon"
+    [style.background]="transaccion.categoria | categoryColor">
+    <ion-icon [name]="transaccion.categoria | categoryIcon"></ion-icon>
+  </div>
+
+  <ion-label>
+    <h2>{{ transaccion.categoria }}</h2>
+    <p>{{ transaccion.descripcion || 'Sin descripción' }}</p>
+    <p class="fecha">{{ transaccion.fecha | dateFormat }}</p>
+  </ion-label>
+
+  <div slot="end" class="amount-container">
+    <span class="amount"
+      [class.ingreso]="transaccion.tipo === 'ingreso'"
+      [class.gasto]="transaccion.tipo === 'gasto'">
+      {{ transaccion.tipo === 'ingreso' ? '+' : '-' }}{{ transaccion.monto | currencyFormat }}
+    </span>
+    <ion-icon
+      *ngIf="transaccion.comprobante"
+      name="image-outline"
+      class="has-photo">
+    </ion-icon>
+  </div>
+</ion-item>

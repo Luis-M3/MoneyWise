@@ -1,0 +1,13 @@
+<div class="dashboard-card" [ngClass]="tipo">
+  <div class="card-icon">
+    <ion-icon [name]="icono"></ion-icon>
+  </div>
+  <div class="card-info">
+    <span class="card-label">{{ titulo }}</span>
+    <span class="card-amount"
+      [class.positive]="tipo === 'ingreso' || (tipo === 'saldo' && monto >= 0)"
+      [class.negative]="tipo === 'gasto' || (tipo === 'saldo' && monto < 0)">
+      {{ tipo === 'gasto' ? '-' : '' }}${{ monto | number:'1.2-2' }}
+    </span>
+  </div>
+</div>

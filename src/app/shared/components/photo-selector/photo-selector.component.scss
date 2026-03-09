@@ -1,0 +1,74 @@
+.photo-selector {
+  width: 100%;
+}
+
+.photo-preview-container {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #5483B9;
+
+  .preview-img {
+    width: 100%;
+    max-height: 220px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .photo-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(2, 16, 36, 0.75);
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px;
+
+    ion-button {
+      --color: #C1E8FF;
+      --padding-start: 8px;
+      --padding-end: 8px;
+    }
+  }
+}
+
+.photo-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.photo-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  border: 2px dashed #5483B9;
+  border-radius: 12px;
+  background: rgba(84, 131, 185, 0.1);
+  gap: 8px;
+
+  ion-icon {
+    font-size: 40px;
+    color: #5483B9;
+  }
+
+  span {
+    color: #7DA0CA;
+    font-size: 14px;
+  }
+}
+
+.buttons-row {
+  display: flex;
+  gap: 10px;
+
+  ion-button {
+    flex: 1;
+    --border-color: #5483B9;
+    --color: #7DA0CA;
+  }
+}

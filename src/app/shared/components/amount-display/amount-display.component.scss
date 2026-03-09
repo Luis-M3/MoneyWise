@@ -1,0 +1,11 @@
+.amount {
+  font-weight: bold;
+
+  &.ingreso { color: #4CAF50; }
+  &.gasto   { color: #FF6B6B; }
+  &.neutral { color: #C1E8FF; }
+
+  &.small  { font-size: 13px; }
+  &.medium { font-size: 18px; }
+  &.large  { font-size: 28px; }
+}

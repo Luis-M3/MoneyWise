@@ -1,0 +1,18 @@
+<div class="photo-preview" [ngClass]="size" (click)="onClick.emit()">
+
+  <ion-avatar *ngIf="size === 'small'">
+    <img [src]="src" alt="foto"/>
+  </ion-avatar>
+
+  <ion-thumbnail *ngIf="size === 'medium'">
+    <img [src]="src" alt="foto"/>
+  </ion-thumbnail>
+
+  <div class="large-preview" *ngIf="size === 'large'">
+    <img [src]="src" alt="foto"/>
+    <div class="zoom-icon">
+      <ion-icon name="expand-outline"></ion-icon>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,12 @@
+<div class="input-wrapper">
+  <ion-item [disabled]="disabled">
+    <ion-label position="floating">{{ label }}</ion-label>
+    <ion-input
+      [type]="type"
+      [placeholder]="placeholder"
+      [value]="value"
+      (ionChange)="changed($event)">
+    </ion-input>
+  </ion-item>
+  <ion-note color="danger" *ngIf="error">{{ error }}</ion-note>
+</div>

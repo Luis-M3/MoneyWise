@@ -1,0 +1,110 @@
+ion-toolbar {
+  --background: #052659;
+  --color: #C1E8FF;
+}
+
+ion-content {
+  --background: #021024;
+}
+
+ion-segment {
+  --background: rgba(84, 131, 185, 0.15);
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+ion-segment-button {
+  --color: #7DA0CA;
+  --color-checked: #C1E8FF;
+  --indicator-color: #5483B9;
+}
+
+.form-section {
+  margin-bottom: 20px;
+}
+
+.section-label {
+  color: #7DA0CA;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: block;
+  margin-bottom: 6px;
+  padding-left: 4px;
+}
+
+ion-item {
+  --background: rgba(84, 131, 185, 0.15);
+  --color: #C1E8FF;
+  --border-color: rgba(84, 131, 185, 0.3);
+  border-radius: 8px;
+
+  ion-icon[slot="start"] {
+    color: #5483B9;
+    margin-right: 8px;
+  }
+}
+
+ion-select {
+  color: #C1E8FF;
+  --placeholder-color: #7DA0CA;
+}
+
+ion-input, ion-textarea {
+  --color: #C1E8FF;
+  --placeholder-color: #7DA0CA;
+}
+
+ion-note {
+  color: #FF6B6B !important;
+  font-size: 12px;
+  padding-left: 8px;
+}
+
+ion-datetime {
+  --background: transparent;
+  --color: #C1E8FF;
+}
+
+.photo-preview {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #5483B9;
+
+  img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+  }
+
+  .delete-photo-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    --background: rgba(255, 107, 107, 0.8);
+    --border-radius: 50%;
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.photo-buttons {
+  display: flex;
+  gap: 10px;
+
+  ion-button {
+    flex: 1;
+    --border-color: #5483B9;
+    --color: #7DA0CA;
+  }
+}
+
+.save-button {
+  --background: #5483B9;
+  --color: #C1E8FF;
+  --border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}

@@ -1,13 +1,63 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>dashboard</ion-title>
+    <ion-title>
+      <div class="toolbar-title">
+        <ion-icon name="wallet-outline"></ion-icon>
+        MoneyWise
+      </div>
+    </ion-title>
+    <ion-note slot="end" class="user-name ion-padding-end">
+      Hola, {{ usuario?.nombre }}
+    </ion-note>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">dashboard</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+
+  <div class="cards-grid">
+    <app-dashboard-card
+      titulo="Saldo Actual"
+      [monto]="resumen.saldoActual"
+      tipo="saldo"
+      icono="wallet">
+    </app-dashboard-card>
+
+    <app-dashboard-card
+      titulo="Ingresos del Mes"
+      [monto]="resumen.totalIngresosMes"
+      tipo="ingreso"
+      icono="arrow-up-circle">
+    </app-dashboard-card>
+
+    <app-dashboard-card
+      titulo="Gastos del Mes"
+      [monto]="resumen.totalGastosMes"
+      tipo="gasto"
+      icono="arrow-down-circle">
+    </app-dashboard-card>
+  </div>
+
+  <div class="section-title">
+    <ion-icon name="pie-chart-outline"></ion-icon>
+    <span>Gastos por Categoría</span>
+  </div>
+
+  <div class="categories-container"
+    *ngIf="resumen.gastosPorCategoria.length > 0; else sinGastos">
+    <app-progress-bar-category
+      *ngFor="let cat of resumen.gastosPorCategoria"
+      [categoria]="cat.categoria"
+      [porcentaje]="cat.porcentaje"
+      [color]="getColorCategoria(cat.categoria)"
+      [monto]="cat.monto">
+    </app-progress-bar-category>
+  </div>
+
+  <ng-template #sinGastos>
+    <app-empty-state
+      mensaje="No hay gastos registrados este mes"
+      icono="receipt-outline">
+    </app-empty-state>
+  </ng-template>
+
 </ion-content>
